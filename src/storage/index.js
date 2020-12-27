@@ -26,6 +26,7 @@ export default {
     clear(key, module_name) {
         let mallObj = this.getStorage();
         if(module_name){
+            if(!mallObj[module_name]) return;
             delete mallObj[module_name][key];
         }else {
             delete mallObj[key];
